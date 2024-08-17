@@ -1,10 +1,10 @@
-﻿namespace Testing.Fundamentals
+﻿namespace Testing.Services
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello, World!");
+           
         }
     }
 }
