@@ -2,6 +2,8 @@
 {
     public class BankAccountLogger : ICustomLogger
     {
+        public string LogType { get; set; }
+
         public bool LogInformation(string message)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
