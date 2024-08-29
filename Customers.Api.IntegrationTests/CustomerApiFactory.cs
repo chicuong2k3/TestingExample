@@ -16,7 +16,13 @@ namespace Customers.Api.IntegrationTests
         : WebApplicationFactory<ApiAssembly>, IAsyncLifetime
     {
         private readonly IContainer dbContainer;
-            
+        // private readonly IContainer dbContainer = 
+        // new PostgreSqlBuilder()
+        // .WithImage("postgres:latest")
+        // .WithDatabase("eventmanagement")
+        // .WithUsername("postgres")
+        // .WithPassword("postgres")
+        // .Build();
 
         private readonly GithubApiServer githubApiServer = new();
 
