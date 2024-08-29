@@ -17,10 +17,15 @@
 # Libraries
 
 [WireMock.Net (Mock External Services)](https://wiremock.org/docs/solutions/dotnet/)
+
 [Bogus (Fake Data)](https://github.com/bchavez/Bogus)
+
 [Testcontainers](https://testcontainers.com/)
-[FluentAssertions](https://fluentassertions.com/)]
-[Playwright (UI Testing)](https://playwright.dev/dotnet/)]
+
+[FluentAssertions](https://fluentassertions.com/)
+
+[Playwright (UI Testing)](https://playwright.dev/dotnet/)
+
 [FluentDocker (Control Docker)](https://github.com/mariotoffia/FluentDocker)
 
 # Unit Testing
