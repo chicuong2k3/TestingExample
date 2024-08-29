@@ -1,3 +1,28 @@
+# The Types of Testing
+
+- Unit Testing
+- Component Testing
+- Integration Testing (prefered than Unit Testing if you need choose one)
+- End-to-End Testing (System Testing)
+- Performance Testing
+  - Load Testing
+  - Soak Testing
+  - Spike Testing
+  - Stress Testing
+
+**Unit Testing, Component Testing, and Integration Testing are done before deployment.**
+
+# Test Pyramid
+
+# Libraries
+
+[WireMock.Net (Mock External Services)](https://wiremock.org/docs/solutions/dotnet/)
+[Bogus (Fake Data)](https://github.com/bchavez/Bogus)
+[Testcontainers](https://testcontainers.com/)
+[FluentAssertions](https://fluentassertions.com/)]
+[Playwright (UI Testing)](https://playwright.dev/dotnet/)]
+[FluentDocker (Control Docker)](https://github.com/mariotoffia/FluentDocker)
+
 # Unit Testing
 
 ## Method Naming Convention
@@ -188,4 +213,45 @@ public void SetSpeed_ValidSpeed_RaiseSpeedSetEvent()
     // Assert
     Assert.That(speed, Is.Not.EqualTo(-1));
 }
+```
+
+# Integration Testing
+
+1. Setup
+2. Dependency Mocking
+3. Execution
+4. Assertion
+5. Cleanup
+
+```c#
+// Setup Code is in Constructor
+
+public async Task Test()
+{
+    var httplClient = new HttpClient() 
+    {
+        BaseAddress = new Uri("http://localhost:5000")
+    };
+
+    var response = await httplClient.GetAsync($"customers/{Guid.NewGuid()}");
+
+    Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+}
+
+public void Dispose()
+{
+	// Cleanup Code
+}
+```
+
+## Test Internal Values
+
+```c#
+[assembly: InternalsVisibleTo("TestProjectFullName")]]
+```
+
+```xml
+<ItemGroup>
+    <InternalsVisibleTo Include="TestProjectFullName" />
+</ItemGroup>
 ```
