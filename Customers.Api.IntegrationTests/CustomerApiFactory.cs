@@ -42,6 +42,18 @@ namespace Customers.Api.IntegrationTests
 
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
+            // Another approach
+            // builder.ConfigureAppConfiguration((_, configBuilder) => 
+            // {
+            //     configBuilder.AddMemoryCollection(new Dictionary<string, string?>()
+            //     {
+            //         { 
+            //             "ConnectionStrings: ",
+            //             "Server="
+            //         }
+            //     });
+            // });
+        
             builder.ConfigureLogging(logging =>
             {
                 logging.ClearProviders();
