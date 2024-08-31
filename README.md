@@ -18,6 +18,8 @@
 
 [WireMock.Net (Mock External Services)](https://wiremock.org/docs/solutions/dotnet/)
 
+[Moq](https://github.com/devlooped/moq)
+
 [Bogus (Fake Data)](https://github.com/bchavez/Bogus)
 
 [Testcontainers](https://testcontainers.com/)
